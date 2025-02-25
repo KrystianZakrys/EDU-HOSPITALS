@@ -1,11 +1,30 @@
 using Microsoft.AspNetCore.Authentication.Negotiate;
+using OpenTelemetry.Trace;
 using Scalar.AspNetCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
-// Add services to the container.
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug() // Ustaw minimalny poziom logowania
+    .WriteTo.Console() // Loguj do konsoli
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day) // Loguj do pliku
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // U¿yj Serilog jako loggera
+
+// Dodaj OpenTelemetry
+builder.Services.AddOpenTelemetry()
+    .WithTracing(tracing =>
+    {
+        tracing
+            .AddAspNetCoreInstrumentation() // Automatyczne instrumentowanie ASP.NET Core
+            .AddHttpClientInstrumentation() // Instrumentowanie klienta HTTP
+            .AddConsoleExporter(); // Dodaj eksportera do konsoli
+    });
+
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
