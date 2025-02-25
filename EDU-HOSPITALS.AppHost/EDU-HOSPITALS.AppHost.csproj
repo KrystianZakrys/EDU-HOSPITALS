@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
 
@@ -23,6 +23,7 @@
     <ProjectReference Include="..\Emergency\Emergency.API.csproj" />
     <ProjectReference Include="..\Hospitals\Hospitals.API.csproj" />
     <ProjectReference Include="..\PatientCard\PatientCard.API.csproj" />
+    <ProjectReference Include="..\ReverseProxy\APIGateway.csproj" />
   </ItemGroup>
 
 </Project>

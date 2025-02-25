@@ -12,6 +12,10 @@ var cache = builder.AddRedis("cache")
     .WithRedisInsight()
     .WithRedisCommander();
 
+
+
+builder.AddProject<Projects.APIGateway>("apigateway").WithReplicas(3);
+
 builder.AddProject<Projects.PatientCard_API>("patientcardAPI")
     .WithScalar()
     .WithReference(rabbitmq)
@@ -31,6 +35,7 @@ builder.AddProject<Projects.Hospitals_API>("hospitalsAPI")
     .WithScalar()
     .WithReference(rabbitmq)
     .WithReference(kafka);
+
 
 
 builder.Build().Run();

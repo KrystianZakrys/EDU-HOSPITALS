@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientCard.API", "PatientCard\PatientCard.API.csproj", "{FA9A671F-2443-4449-95A0-4412F873AA94}"
 EndProject
@@ -51,6 +51,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientCard.Domain", "PatientCard.Domain\PatientCard.Domain.csproj", "{566A6744-BD36-45C7-BE66-E9F6BF76C02A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientCard.Infrastructure", "PatientCard.Infrastructure\PatientCard.Infrastructure.csproj", "{44201EEA-50B7-476B-91DF-BC5E858B2712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "ReverseProxy\APIGateway.csproj", "{2D4AA6AC-3B55-4D19-A426-B413EBDF76A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -130,6 +132,10 @@ Global
 		{44201EEA-50B7-476B-91DF-BC5E858B2712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44201EEA-50B7-476B-91DF-BC5E858B2712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44201EEA-50B7-476B-91DF-BC5E858B2712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4AA6AC-3B55-4D19-A426-B413EBDF76A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4AA6AC-3B55-4D19-A426-B413EBDF76A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4AA6AC-3B55-4D19-A426-B413EBDF76A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4AA6AC-3B55-4D19-A426-B413EBDF76A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
