@@ -2,12 +2,35 @@ using Aspire.Customization.AppHost;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.PatientCard_API>("patientcardAPI").WithScalar();
+var rabbitmq = builder.AddRabbitMQ("messaging")
+    .WithManagementPlugin();
 
-builder.AddProject<Projects.Emergency_API>("emergencyAPI").WithScalar();
+var kafka = builder.AddKafka("kafka")
+    .WithKafkaUI();
 
-builder.AddProject<Projects.Clinics_API>("clinicsAPI").WithScalar();
+var cache = builder.AddRedis("cache")
+    .WithRedisInsight()
+    .WithRedisCommander();
 
-builder.AddProject<Projects.Hospitals_API>("hospitalsAPI").WithScalar();
+builder.AddProject<Projects.PatientCard_API>("patientcardAPI")
+    .WithScalar()
+    .WithReference(rabbitmq)
+    .WithReference(kafka);
+
+builder.AddProject<Projects.Emergency_API>("emergencyAPI")
+    .WithScalar()
+    .WithReference(rabbitmq)
+    .WithReference(kafka);
+
+builder.AddProject<Projects.Clinics_API>("clinicsAPI")
+    .WithScalar()
+    .WithReference(rabbitmq)
+    .WithReference(kafka);
+
+builder.AddProject<Projects.Hospitals_API>("hospitalsAPI")
+    .WithScalar()
+    .WithReference(rabbitmq)
+    .WithReference(kafka);
+
 
 builder.Build().Run();
