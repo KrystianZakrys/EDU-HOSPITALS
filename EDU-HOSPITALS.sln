@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientCard.API", "PatientCard\PatientCard.API.csproj", "{FA9A671F-2443-4449-95A0-4412F873AA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDU-HOSPITALS.AppHost", "EDU-HOSPITALS.AppHost\EDU-HOSPITALS.AppHost.csproj", "{A956AE27-ADA9-46D3-AC9C-8DECA3270B19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDU-HOSPITALS.ServiceDefaults", "EDU-HOSPITALS.ServiceDefaults\EDU-HOSPITALS.ServiceDefaults.csproj", "{FB6A3F83-F1AA-4C85-941B-7908A641ECDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emergency.API", "Emergency\Emergency.API.csproj", "{178C6F9E-237A-489E-8DCD-FC6AD72D9A45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinics.API", "Clinics\Clinics.API.csproj", "{9CD6016B-D665-408A-895E-46063EEBE18B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospitals.API", "Hospitals\Hospitals.API.csproj", "{4D43F60F-8ECA-444A-BC47-86D30D568FF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Clinics", "_Clinics", "{78B68B43-32D8-475B-8110-30AEE9801DFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Emergency", "_Emergency", "{25CE76AE-CF56-45A0-A934-6CA0E0F9C308}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Hospitals", "_Hospitals", "{C71018AC-9A7A-429E-A3EB-439498156C6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_PatientCard", "_PatientCard", "{300F0D89-E324-4D2D-ACAF-8A009375B881}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA9A671F-2443-4449-95A0-4412F873AA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9A671F-2443-4449-95A0-4412F873AA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9A671F-2443-4449-95A0-4412F873AA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9A671F-2443-4449-95A0-4412F873AA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A956AE27-ADA9-46D3-AC9C-8DECA3270B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A956AE27-ADA9-46D3-AC9C-8DECA3270B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A956AE27-ADA9-46D3-AC9C-8DECA3270B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A956AE27-ADA9-46D3-AC9C-8DECA3270B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6A3F83-F1AA-4C85-941B-7908A641ECDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6A3F83-F1AA-4C85-941B-7908A641ECDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6A3F83-F1AA-4C85-941B-7908A641ECDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6A3F83-F1AA-4C85-941B-7908A641ECDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178C6F9E-237A-489E-8DCD-FC6AD72D9A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178C6F9E-237A-489E-8DCD-FC6AD72D9A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178C6F9E-237A-489E-8DCD-FC6AD72D9A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178C6F9E-237A-489E-8DCD-FC6AD72D9A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD6016B-D665-408A-895E-46063EEBE18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD6016B-D665-408A-895E-46063EEBE18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD6016B-D665-408A-895E-46063EEBE18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD6016B-D665-408A-895E-46063EEBE18B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D43F60F-8ECA-444A-BC47-86D30D568FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D43F60F-8ECA-444A-BC47-86D30D568FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D43F60F-8ECA-444A-BC47-86D30D568FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D43F60F-8ECA-444A-BC47-86D30D568FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA9A671F-2443-4449-95A0-4412F873AA94} = {300F0D89-E324-4D2D-ACAF-8A009375B881}
+		{178C6F9E-237A-489E-8DCD-FC6AD72D9A45} = {25CE76AE-CF56-45A0-A934-6CA0E0F9C308}
+		{9CD6016B-D665-408A-895E-46063EEBE18B} = {78B68B43-32D8-475B-8110-30AEE9801DFC}
+		{4D43F60F-8ECA-444A-BC47-86D30D568FF4} = {C71018AC-9A7A-429E-A3EB-439498156C6A}
+	EndGlobalSection
+EndGlobal
