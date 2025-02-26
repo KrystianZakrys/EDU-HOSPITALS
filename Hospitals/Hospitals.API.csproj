@@ -15,6 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.2.1" />
     <PackageReference Include="OpenTelemetry" Version="1.11.1" />
     <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.11.1" />
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.11.1" />
@@ -26,6 +27,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EDU-HOSPITALS.ServiceDefaults\EDU-HOSPITALS.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Hospitals.Application\Hospitals.Application.csproj" />
+    <ProjectReference Include="..\Hospitals.Infrastructure\Hospitals.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

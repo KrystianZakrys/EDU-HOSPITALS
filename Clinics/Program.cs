@@ -1,4 +1,10 @@
-using Microsoft.AspNetCore.Authentication.Negotiate;
+//using Microsoft.AspNetCore.Authentication.Negotiate;
+using Clinics.Domain.Entities;
+using Clinics.Domain.Repositories;
+using Clinics.Infrastructure;
+using Clinics.Infrastructure.Repositories;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using OpenTelemetry.Trace;
 using Scalar.AspNetCore;
 using Serilog;
@@ -26,8 +32,26 @@ builder.Services.AddOpenTelemetry()
     });
 
 
+// MongoDB configuration
+builder.Services.AddSingleton<IMongoClient, MongoClient>(sp =>
+{
+    var settings = new MongoClientSettings
+    {
+        Server = new MongoServerAddress("localhost", 27017), // MongoDB server settings
+    };
+    return new MongoClient(settings);
+});
+
+builder.Services.AddScoped(sp =>
+{
+    var mongoClient = sp.GetRequiredService<IMongoClient>();    
+
+    return mongoClient.GetDatabase("clinics");
+});
+
+builder.Services.AddScoped<IClinicRepository<Clinic>, ClinicRepository>();
+
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 //builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)

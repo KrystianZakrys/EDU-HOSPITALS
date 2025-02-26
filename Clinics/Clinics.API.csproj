@@ -22,9 +22,12 @@
     <PackageReference Include="Serilog" Version="4.2.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+	  <PackageReference Include="MongoDB.Driver" Version="3.2.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Clinics.App\Clinics.Application.csproj" />
+    <ProjectReference Include="..\Clinics.Infrastructure\Clinics.Infrastructure.csproj" />
     <ProjectReference Include="..\EDU-HOSPITALS.ServiceDefaults\EDU-HOSPITALS.ServiceDefaults.csproj" />
   </ItemGroup>
 
