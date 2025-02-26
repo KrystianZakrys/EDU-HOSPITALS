@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Authentication.Negotiate;
 using MongoDB.Driver;
 using OpenTelemetry.Trace;
 using PatientCard.Domain.Entities;
+using PatientCard.Domain.Events;
 using PatientCard.Domain.Repositories;
+using PatientCard.Infrastructure;
 using PatientCard.Infrastructure.Repositories;
 using Scalar.AspNetCore;
 using Serilog;
@@ -44,10 +46,11 @@ builder.Services.AddScoped(sp =>
 {
     var mongoClient = sp.GetRequiredService<IMongoClient>();
 
-    return mongoClient.GetDatabase("clinics");
+    return mongoClient.GetDatabase("patientCard");
 });
 
 builder.Services.AddScoped<IPatientCardHistoryRepository<PatientCardHistory>, PatientCardRepository>();
+builder.Services.AddScoped<IEventStore, EventStore>();
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();

@@ -45,7 +45,7 @@ builder.Services.AddScoped(sp =>
 {
     var mongoClient = sp.GetRequiredService<IMongoClient>();
 
-    return mongoClient.GetDatabase("clinics");
+    return mongoClient.GetDatabase("hospitals");
 });
 
 builder.Services.AddScoped<IHospitalRepository<Hospital>, HospitalRepository>();
