@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hospitals.Controllers;
 
-[Authorize]
+[AllowAnonymous]
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase

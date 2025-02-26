@@ -14,7 +14,7 @@ var cache = builder.AddRedis("cache")
 
 
 
-builder.AddProject<Projects.APIGateway>("apigateway").WithReplicas(3);
+builder.AddProject<Projects.APIGateway>("apigateway");//.WithReplicas(3);
 
 builder.AddProject<Projects.PatientCard_API>("patientcardAPI")
     .WithScalar()
